@@ -8,7 +8,7 @@
     <meta name="author" content="Julia Pieters">
     <meta name="keywords" content="waarom deze studie? home pagina">
     <meta name="description" content="home pagina">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./CSS/style.css">
 </head>
 
 
@@ -22,15 +22,15 @@
     <nav>
         <div class="nav">
 
-            <a class="font" href="./index.html">Home</a>
+            <a class="font" href="./">Home</a>
 
-            <a href="./profile.html">Profile</a>
+            <a href="./profile">Profile</a>
 
-            <a href="./dashboard.html"> Dashboard</a>
+            <a href="./dashboard"> Dashboard</a>
 
-            <a href="./faq.html">FAQ</a>
+            <a href="./FAQ">FAQ</a>
 
-            <a href="./blog.html">Blog</a>
+            <a href="./blog">Blog</a>
     </nav>
 
 
@@ -69,7 +69,7 @@
     </div>
     <br>
 
-    <img class="foto-logo" src="IMG/IMG_4055.jpg" alt="jp logo" width="50" height="50" margin-right: 20%>
+    <img class="foto-logo" src="/IMG/IMG_4055.jpg" alt="jp logo" width="50" height="50" margin-right: 20%>
 
 
 </div>
