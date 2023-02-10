@@ -2,12 +2,14 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Faq;
 use Illuminate\Http\Request;
 
 class FAQController extends Controller
 {
     //
     public function show(){
-        return view('FAQ');
+        $faqs = Faq::all();
+        return view('FAQ')-> with('faqs',$faqs);
     }
 }

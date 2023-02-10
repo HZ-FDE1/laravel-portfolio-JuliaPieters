@@ -87,40 +87,10 @@
 
 <hr>
 
-<h2 class="faq"> Hoe print ik een document van mijn laptop op de HZ?</h2>
-<h4> Eerst moet je geld op je studenten pas zetten.</h4>
-<h4>Dat kan bij de pinautomaat naast de balie</h4>
-<h4>Als er geld op staat kun je printen door het bestand naar de printer te sturen.</h4>
-<h4>Ga naar de printer, houd je studentenpas er tegen, en printen maar!</h4>
-
-
-<h2> Hoe scan je een document en verstuur je het naar je laptop?</h2>
-<h4> Ga naar de printer, houd je studentenpas er tegen en leg het document in de printer </h4>
-<h4> kies je laptop en druk op scannen.</h4>
-
-<h2> Hoe kan je iets kopen op de hz webshop?</h2>
-<h4> ga naar de hz webshop site, log in met je hz gegevens en kopen maar! <a
-        href="https://webshop.hz.nl/webshopapp/default.aspx?menu=082076044027019251066025111065201099237062130097">link
-        naar de webshop</a> </h4>
-
-
-<h2> Waar kan ik de laatste updates vinden over ziekte en covid gerelateerde situaties?</h2>
-<h4> <a class="linkfaq" href="https://hz.nl/actualiteiten/coronavirus"> Gebruik deze link voor alle informatie
-        rondom covid en
-        ziekte</a></h4>
-
-
-<h2> Hoe kan je een ruimte reserveren of iets anders?</h2>
-<h4> <a class="linkfaq"
-        href="https://hzuniversity.topdesk.net/tas/public/ssp/52a63378-addd-4b21-b808-571200fd8d0c">
-        gebruik deze
-        link om voor van alles een reservering te maken</a>
-
-
-    <h2> Wat zijn de instructies om te parkeren op het hz parkeerterrein?</h2>
-    <h4> studenten en medewerkers kunnen met hun hz pas gratis parkeren. </h4>
-    <h4> anderen kunnen gratis parkeren bij poelendaelesingel 8. dit is maar een paar minuten lopen naar de hz!
-    </h4>
+    @foreach($faqs as $faq)
+        <h2>{{ $faq->question }}</h2>
+        <h4>{{ $faq->answer }}</h4>
+    @endforeach
 
     <img class="foto-faq"
          src="https://st2.depositphotos.com/2495409/7863/i/450/depositphotos_78637522-stockafbeelding-vraagteken.jpg" alt="fotofaq">
