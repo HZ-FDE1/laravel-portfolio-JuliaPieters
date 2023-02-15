@@ -290,3 +290,10 @@ a {
     height: 20px
 }
 
+ .zijkant nav ul li {
+    list-style: none;
+}
+
+a{
+    color: white;
+}
