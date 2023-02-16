@@ -36,7 +36,12 @@ Route::get('/posts/{post}',  function($post){
 Route::get('/', [WelcomeController::class, 'show']);
 Route::get('/profile', [ProfileController::class, 'show']);
 Route::get('/dashboard', [DashboardController::class, 'show']);
+Route::post('/FAQ', [FAQController::class, 'store']);
+Route::get('/FAQ/create', [FAQController::class, 'create']);
 Route::get('/FAQ', [FAQController::class, 'show']);
+Route::post('/blog', [ArticleController::class, 'store']);
+Route::get('/blog/create', [ArticleController::class, 'create']);
 Route::get('/blog', [ArticleController::class, 'show']);
+
 
 
