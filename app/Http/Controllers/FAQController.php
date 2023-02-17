@@ -25,8 +25,20 @@ class FAQController extends Controller
         $FAQ->body =request('body');
 
         $FAQ->save();
-        return redirect('/faq');
+        return redirect('/FAQ');
+    }
+    public function edit($id){
+        $FAQ = Faq::find($id);
+        return view('FAQ.edit', ['FAQ' => $FAQ]);
+    }
+    public function update($id){
+        $FAQ = Faq::find($id);
+        $FAQ->title =request('title');
+        $FAQ->excerpt =request('excerpt');
+        $FAQ->body =request('body');
+        $FAQ->save();
+
+        return redirect('/FAQ' . $FAQ ->id);
     }
     //
-}
 }
