@@ -42,10 +42,10 @@ Route::get('/FAQ/create', [FAQController::class, 'create']);
 Route::get('/FAQ', [FAQController::class, 'show']);
 Route::get('/FAQ/edit', [FAQController::class, 'edit']);
 
-Route::get('/blog', [ArticleController::class, 'index']);
+Route::get('/blog', [ArticleController::class, 'index'])->name('articles.index');
 Route::post('/blog', [ArticleController::class, 'store']);
 Route::get('/blog/create', [ArticleController::class, 'create']);
-Route::get('/blog/{articles}', [ArticleController::class, 'show']);
+Route::get('/blog/{articles}', [ArticleController::class, 'show'])->name('articles.show');
 Route::get('/blog/{articles}/edit', [ArticleController::class, 'edit']);
 Route::put('/blog/{articles}', [ArticleController::class, 'update']);
 Route::delete('/blog/{articles}', [ArticleController::class, 'destroy']);

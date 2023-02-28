@@ -27,25 +27,23 @@ class ArticleController extends Controller
             'content' => 'required',
         ]);
 
-        $article = new Article();
-
-        $article->title =request('title');
-        $article->content =request('content');
-
-        $article->save();
-        return redirect('/blog');
+   Article::create([
+       'title' => request('title'),
+      'content' => request('content')
+   ]);
+        return redirect(route('articles.index'));
     }
     public function edit($id){
         $article = Article::find($id);
         return view('edit', compact('article'));
     }
     public function update($id){
-        $article = Article::find($id);
-        $article->title =request('title');
-        $article->content =request('content');
-        $article->save();
+        Article::find([
+            'title' => request('title'),
+            'content' => request('content')
+        ]);
 
-        return redirect('/blog/' . $article ->id);
+        return redirect(route('articles.show'));
     }
     public function destroy($id)
     {
