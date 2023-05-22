@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\FormController;
+use App\Http\Controllers\SuperHeroController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -32,8 +33,8 @@ Route::get('/posts/{post}',  function($post){
 Route::resource('/forms', FormController::class);
 Route::get('/', [\App\Http\Controllers\HomepageController::class, 'show']);
 
-
-
 Route::get('/test-500', function () {
     throw new Exception("Test 500 Exception");
 });
+
+Route::get('/{id}', [SuperHeroController::class, 'get_hero'])->name('hero');

@@ -8,7 +8,7 @@
     <meta name="author" content="Julia Pieters">
     <meta name="keywords" content="waarom deze studie? home pagina">
     <meta name="description" content="home pagina">
-    <link rel="stylesheet" href="./CSS/style.css">
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body style="background-color: rgb(85, 150, 127)">
@@ -19,6 +19,7 @@
         <ul>
             <li class="{{Request::path()=== '/' ? 'current_page_item' : ''}}"><a href="./">Home</a></li>
             <li class="{{Request::path()=== 'forms' ? 'current_page_item' : ''}}"><a href="./forms">Form</a></li>
+            <li class="{{Request::path()=== 'forms' ? 'current_page_item' : ''}}"><a href="./314">SuperHeroes</a></li>
 
         </ul>
 
