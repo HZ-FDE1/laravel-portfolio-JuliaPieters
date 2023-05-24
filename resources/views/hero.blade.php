@@ -7,9 +7,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hero</title>
 </head>
+<a href="/">Home Page</a>
 <body>
 <h1>{{ $hero->name}}</h1>
 <hr>
+<a style="font-size: x-large" href="{{ url('/' . rand(1,500)) }}">Get a random superhero!</a>
 {{--@dd($hero)--}}
 <p>gender: {{ $hero->appearance->gender}}</p>
 <p>race: {{ $hero->appearance->race}}</p>
@@ -22,9 +24,7 @@
 <p>durability: {{ $hero->powerstats->durability}}</p>
 <p>power: {{ $hero->powerstats->power}}</p>
 <p>combat: {{ $hero->powerstats->combat}}</p>
-
 <img src="{{ $hero->image->url}}">
-
 </body>
 </html>
 
