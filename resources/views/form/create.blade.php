@@ -1,7 +1,7 @@
 @extends('layouts.layout')
-
 @section('content')
     <section class="section">
+        <link rel="stylesheet" href="/css/styles.css">
         <div class="container">
             <div class="columns">
                 <div class="column is-12"> {{-- These divs are needed for proper layout --}}
@@ -13,47 +13,44 @@
                             <h1>Fill in this Form</h1>
                             <div class="HOME PAGE">
                             </div>
-
                             </body>
                             <hr>
+                            <h3>please fill everything in!</h3>
                             <div class="form">
                         <div class="field">
-                            <label class="label" for="name" style="font-size: x-large">Name</label>
-
+                            <label class="label" for="name" style="font-size: x-large">Name</label> <label class="label" for="description" style="font-size:medium">(please fill in your name!)</label>
                             <div class="control">
                                 <input class="input" type="text" name="name" id="name" value="{{ old('name') }}">
 
                                 @if ($errors->has('name'))
                                     <p class="error" style="color: darkred">{{ $errors->first('name') }}</p>
-                                    <p style="color: darkred">Oops it looks like you did not fill in this field!</p>
+{{--                                    <p style="color: darkred">Oops it looks like you did not fill in this field!</p>--}}
                                 @endif
 
                             </div>
                         </div>
 
                         <div class="field">
-                            <label class="label" for="age" style="font-size: x-large">Age</label>
-
+                            <label class="label" for="age" style="font-size: x-large">Age</label> <label class="label" for="description" style="font-size:medium">(please fill in your age in numbers!)</label>
                             <div class="control">
                                 <input class="textarea" name="age" id="age" value="{{ old('age') }}">
 
                                 @if ($errors->has('age'))
                                     <p class="error" style="color: darkred">{{ $errors->first('age') }}</p>
-                                    <p style="color: darkred"> Oops it looks like you did not fill in this field! </p>
+{{--                                    <p style="color: darkred"> Oops it looks like you did not fill in this field! </p>--}}
                                 @endif
 
                             </div>
                         </div>
 
                         <div class="field">
-                            <label class="label" for="description" style="font-size: x-large">Description</label>
+                            <label class="label" for="description" style="font-size: x-large">Description</label> <label class="label" for="description" style="font-size:medium">(please fill in a small description!)</label>
 
                             <div class="control">
                                 <input class="description" name="description" id="description" value="{{ old('description') }}">
-
                                 @if ($errors->has('description'))
                                     <p class="error" style="color: darkred">{{ $errors->first('description') }}</p>
-                                    <p style="color: darkred"> Oops it looks like you did not fill in this field! </p>
+{{--                                    <p style="color: darkred"> Oops it looks like you did not fill in this field! </p>--}}
                                 @endif
 
                             </div>
@@ -70,5 +67,4 @@
         </div>
     </section>
 @endsection
-
 

@@ -19,7 +19,7 @@
         <ul>
             <li class="{{Request::path()=== '/' ? 'current_page_item' : ''}}"><a href="./">Home</a></li>
             <li class="{{Request::path()=== 'forms' ? 'current_page_item' : ''}}"><a href="./forms">Form</a></li>
-            <li class="{{Request::path()=== 'superheroes' ? 'current_page_item' : ''}}"><a href="{{ url('/' . rand(1,500)) }}">SuperHeroes</a></li>
+            <li class="{{Request::path()=== 'superheroes' ? 'current_page_item' : ''}}"><a href="{{ url('/hero')}}">SuperHeroes</a></li>
             <li class="{{Request::path()=== 'login' ? 'current_page_item' : ''}}"><a href="./login">Login</a></li>
 
         </ul>
