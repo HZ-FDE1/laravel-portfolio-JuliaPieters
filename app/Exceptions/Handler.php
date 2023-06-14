@@ -47,15 +47,15 @@ class Handler extends ExceptionHandler
             //
         });
     }
-    public function render($request, Exception|Throwable $exception): \Illuminate\Http\Response|\Illuminate\Http\JsonResponse|\Symfony\Component\HttpFoundation\Response
-    {
-        if ($exception instanceof \Symfony\Component\HttpKernel\Exception\NotFoundHttpException) {
-            return response()->view('errors.404', [], 404);
-        }
-        if ($this->isHttpException($exception)) {
-            return $this->renderHttpException($exception);
-        } else {
-            return response()->view('errors.500', [], 500);
-        }
-    }
+//    public function render($request, Exception|Throwable $exception): \Illuminate\Http\Response|\Illuminate\Http\JsonResponse|\Symfony\Component\HttpFoundation\Response
+//    {
+//        if ($exception instanceof \Symfony\Component\HttpKernel\Exception\NotFoundHttpException) {
+//            return response()->view('errors.404', [], 404);
+//        }
+//        if ($this->isHttpException($exception)) {
+//            return $this->renderHttpException($exception);
+//        } else {
+//            return response()->view('errors.500', [], 500);
+//        }
+//    }
 }

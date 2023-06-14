@@ -38,7 +38,7 @@ class FormController extends Controller
     public function store(Request $request): \Illuminate\Contracts\Foundation\Application|\Illuminate\Http\RedirectResponse|\Illuminate\Routing\Redirector
     {
         Form::create($this->validateform($request));
-        return redirect(route('form.index'));
+        return redirect(route('forms.index'));
         //
     }
 
@@ -48,9 +48,9 @@ class FormController extends Controller
      * @param  \App\Models\Form  $form
      * @return \Illuminate\Http\Response
      */
-    public function show()
+    public function show(Form $form)
     {
-        return view('form.index');
+        return view('form.show', compact('form'));
     }
 
     /**
@@ -61,7 +61,7 @@ class FormController extends Controller
      */
     public function edit(Form $form)
     {
-        //
+        return view('form.edit', compact('form'));
     }
 
     /**
@@ -75,7 +75,7 @@ class FormController extends Controller
     {
         $form->update($this->validateform($request));
 
-        return redirect()->route('form.show', $form);
+        return redirect()->route('forms.show', $form);
     }
 
     /**
@@ -88,7 +88,7 @@ class FormController extends Controller
     {
         $form->delete();
 
-        return redirect()->route('form.index');
+        return redirect()->route('forms.index');
     }
 
     private function validateform(Request $request)
