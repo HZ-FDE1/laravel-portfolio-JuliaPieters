@@ -37,5 +37,6 @@ Route::get('/test-500', function () {
     throw new Exception("Test 500 Exception");
 });
 
+
 Route::get('/api/{id}', [SuperHeroController::class, 'get_hero'])->name('hero.load');
 Route::get('/hero', [SuperHeroController::class, 'show_hero'])->name('hero.show');
