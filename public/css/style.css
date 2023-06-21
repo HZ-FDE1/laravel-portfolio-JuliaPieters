@@ -12,7 +12,7 @@ li {
 }
 
 body {
-    background-color: red;
+    background-color: rgb(128, 187, 164);
 }
 
 .hz {
@@ -318,3 +318,9 @@ a{
 .errortext {
     color: darkred;
 }
+
+.error {
+    border: 1px solid #000; /* Specify the border width and color */
+    padding: 5px; /* Optional: Add some padding around the element */
+}
+

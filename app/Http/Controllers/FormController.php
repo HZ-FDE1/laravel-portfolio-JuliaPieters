@@ -95,8 +95,8 @@ class FormController extends Controller
     {
         return $request->validate([
             'name' => 'required',
-            'age' => 'required',
-            'description' => 'required'
+            'age' => 'required|numeric',
+            'description' => 'required|max:50'
         ]);
     }
 }
