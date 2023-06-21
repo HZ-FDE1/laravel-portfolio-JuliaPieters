@@ -20,7 +20,7 @@
             <li class="{{Request::path()=== '/' ? 'current_page_item' : ''}}"><a href="./">Home</a></li>
             <li class="{{Request::path()=== 'forms' ? 'current_page_item' : ''}}"><a href="./forms">Form</a></li>
             <li class="{{Request::path()=== 'superheroes' ? 'current_page_item' : ''}}"><a href="{{ url('/hero')}}">SuperHeroes</a></li>
-            <li class="{{Request::path()=== 'login' ? 'current_page_item' : ''}}"><a href="./login">Login</a></li>
+            <li class="{{Request::path()=== 'dashboard' ? 'current_page_item' : ''}}"><a href="./dashboard">Dashboard</a></li>
 
         </ul>
 
